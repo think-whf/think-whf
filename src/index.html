@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css"/>
+	<script src="assets/jquery-1.12.0.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$(function(){
+			//fous
+			var $fousUs = $('.fousUs');
+			var $link = $('.fousUs_link');
+			$fousUs.hover(function(){
+				console.log("sasd")
+				$link.show();
+			},function(){
+				$link.hide();
+			});
+			//shoppingCart
+			var $cart = $('.shoppingCart');
+			console.log($cart);
+			var $cartList = $('.cartList');
+			$cart.hover(function(){
+				$cartList.show();
+			},function(){
+				$cartList.hide();
+			});
+		});
+			
+	</script>
+</head>
+<body>
+	<!--*********************header***************************-->
+	<div class="header">
+		<div class="headBar">
+			<div class="head">
+				<div class="headLeft">
+					<a href="#" class="head_enroll">注册</a>
+					<a href="#" class="head_enter">登录</a>
+					<a href="#" class="indent">订单查询</a>
+				</div>
+				<div class="headRight">
+					<div class="hotLine">客服热线 : 4000-250-603</div>
+					<div class="fousUs">
+						<span></span>
+						<a href="#">关注我们</a>
+						<ul class="fousUs_link">
+							<li><a href="#"><img src="img/fou_sina.gif"/>新浪微博</a></li>
+							<li><a href="#"><img src="img/fou_wechat.gif"/>美西微信</a></li>
+						</ul>
+					</div>
+					<div class="shoppingCart">
+						<a class="shopping" href="#">
+							<div class="cartLeft">
+								<span class="shopping_bg"></span>
+								<i>购物袋 (&nbsp;<span>0</span>&nbsp;)</i>
+							</div>
+							<div class="cartRight">▼</div>
+						</a>
+						<div class="cartList">你的购物车是空的</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--*********************headList**********-->
+		<div class="headList">
+			<!--***************二维码*********-->
+			<div class="maBox">
+				<a href="#"><img src="img/yard01.png"/></a>
+				<img src="img/ewm_txt.png" class="maTips"/>
+			</div>
+			<!--***************logo*********-->
+			<div class="logo">
+				<a href="#"><img src="img/eightLogo.gif"/></a>
+			</div>
+			<!--***************搜索*********-->
+			<div class="search">
+				<input type="text" titile value="请输入关键字" id="searchTxt" />
+				<input type="button" id="searchBtn"/>
+			</div>
+			<ul class="headNav">
+				<li><a href="#">首页</a>
+					<div class="home">
+						<div class="home_left">
+							<p><a href="#">今日上新</a></p>
+							<p><a href="#">昨日上新</a></p>
+							<p><a href="#">本周上新</a></p>
+							<span>所有男仕新品</span>
+							<span>所有女士新品</span>
+						</div>
+					</div>
+				</li>
+				<li><a href="#">新近单品</a></li>
+				<li><a href="#">女士</a></li>
+				<li><a href="#">男士</a></li>
+				<li><a href="#">童装</a></li>
+				<li><a href="#">腕表</a></li>
+				<li><a href="#">品牌</a></li>
+				<li><a href="#">特惠区</a></li>
+				<li><a href="#" class="Mzine">M潮流</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
