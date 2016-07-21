@@ -28,9 +28,9 @@ a:hover{color:#8e0c3a;}
 .headRight .hotLine{margin:10px 0 8px;}
 
 /*--------------fousUs-------------------*/
-.headRight .fousUs{margin:10px 3px 8px 24px;position: relative;}
+.headRight .fousUs{padding:10px 3px 8px 24px;position: relative;}
 .fousUs span{float: left;width:15px;height:14px;background: url("img/headico01.png") no-repeat 0 -15px;margin-right:2px;}
-.fousUs .fousUs_link{width:166px;position: absolute;right:0;top:36px;z-index: 7;border:1px solid #ccc;background: #fff;display: none;}
+.fousUs .fousUs_link{width:166px;position: absolute;right:0;top:34px;z-index: 7;border:1px solid #ccc;background: #fff;display: none;}
 .fousUs .fousUs_link li{float: left;}
 .fousUs .fousUs_link li a{float: left;padding: 11px 17px;text-align: center;}
 .fousUs .fousUs_link li a img{margin-left:10px;}
@@ -82,7 +82,7 @@ a:hover{color:#8e0c3a;}
 .recommend dl a:hover{color:#8e0c3a;}
 
 /*-----------------sku-------------------*/
-.sku,.privilege{display: block;height:16px;line-height:16px;border-bottom: 1px solid #ccc;position: absolute;top:268px;left:10px;}
+.sku,.privilege{display: block;height:16px;line-height:16px;border-bottom: 1px solid #ccc;padding:4px 0;position: absolute;top:268px;left:10px;}
 .privilege{top:240px;}
 
 .Clothes_shoes{float: left;width:304;height:190px;margin-top:3px;margin-left:10px;}

@@ -27,13 +27,14 @@
 				$cartList.hide();
 			});
 
-			var $home = $('.Nav').find('.home');
-			$.each($home,function(idx,item){
-				console.log(item)
-				$(this).on('mouseenter',function(){
-					$(this).show();
+			var $Nav = $('.Nav');
+			console.log($Nav)
+			$.each($Nav,function(idx,item){
+				var $home = $(item).find('.home');
+				$(item).on('mouseenter',function(){
+					$home.show();
 				}).on('mouseleave',function(){
-					$(this).hide();
+					$home.hide();
 				});
 			});
 		});	
