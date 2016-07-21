@@ -5,8 +5,9 @@ a{text-decoration:none;color:#7a7a7a;}
 img{border:0;display:block;}
 ul,li,ol{list-style:none;}
 input{outline:none;}
-body{font:14px "微软雅黑";color:#6c6c6c;}
+body{font:12px "微软雅黑";color:#6c6c6c;}
 i{font-style:normal;}
+a:hover{color:#8e0c3a;}
 
 
 
@@ -17,7 +18,7 @@ i{font-style:normal;}
 .head{width:960px;margin:0 auto;height:36px;font-size: 12px;line-height: 16px;}
 
 .headLeft{float:left;overflow: hidden;margin:10px 0 8px;}
-.headLeft a:hover{color:#e81e39;}
+.headLeft a:hover{color:#8e0c3a;}
 .headLeft .head_enroll{padding-right:16px;border-right:1px solid #ccc; }
 .headLeft .head_enter{padding: 0 14px;}
 
@@ -56,12 +57,33 @@ i{font-style:normal;}
 
 /*-----------------nav-------------------*/
 .headNav{float: left;border-bottom:1px solid #333;position: relative;}
-.headNav li{float: left;}
-.headNav li>a{float: left;padding: 0 36px;height:32px;line-height: 32px;color:#333;}
-.headNav li>a.Mzine{background:#8e0c3a;color:#fff;padding:0 38px;}
-.headNav li>a:hover{background:#8e0c3a;color:#fff;}
+.headNav .Nav{float: left;}
+.headNav .Nav>a{float: left;padding: 0 36px;height:32px;line-height: 32px;color:#333;font-size: 14px;}
+.headNav .Nav>a.Mzine{background:#8e0c3a;color:#fff;padding:0 38px;}
+.headNav .Nav>a:hover{background:#8e0c3a;color:#fff;}
+/*-----------------home-------------------*/
+.home{width:958px;height:305px;border:1px solid #ccc;position: absolute;left:0;top:33px;padding-top:10px;display: none;}
+/*-----------------homeLeft-------------------*/
+.home_left{padding:0 26px;}
+.home_left p{height:30px;}
+.home_left p a{display: block;height:30px;line-height:30px;color:#8e0c3a;font-weight: bold;}
+.home_left span{display: block;height:16px;line-height:16px;border-bottom: 1px solid #ccc;margin:4px 0;}
+.home_left span a:hover{color:#8e0c3a;}
+.home_left .newon{margin-top:152px;}
+/*-----------------Navlist-------------------*/
+.Navlist{float: left;padding:0 10px;position: relative;}
+.Navlist h4{height:30px;line-height:30px;color:#8e0c3a;font-weight: bold;margin-bottom: 4px;}
+.Navlist a{display: block;height:22px;line-height: 22px;}
+.Navlist a:hover{color:#8e0c3a;}
+/*-----------------recommend-------------------*/
+.recommend{float: left;}
+.recommend h4{height:30px;line-height:30px;color:#8e0c3a;font-weight: bold;margin-bottom: 4px;}
+.recommend dl{float: left;width:160px;margin:0 19px 15px 19px;}
+.recommend dl a:hover{color:#8e0c3a;}
 
-.home{width:958px;height:305px;border:1px solid #ccc;position: absolute;left:0;top:33px;}
+/*-----------------sku-------------------*/
+.sku,.privilege{display: block;height:16px;line-height:16px;border-bottom: 1px solid #ccc;position: absolute;top:268px;left:10px;}
+.privilege{top:240px;}
 
-.home p{height:30px;margin-left:25px;}
-.home p a{display: block;height:30px;line-height:30px;color:#8e0c3a;font-weight: bold;}
+.Clothes_shoes{float: left;width:304;height:190px;margin-top:3px;margin-left:10px;}
+.Clothes_shoes img{width:304;height:190px;}

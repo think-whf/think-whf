@@ -26,8 +26,17 @@
 			},function(){
 				$cartList.hide();
 			});
-		});
-			
+
+			var $home = $('.Nav').find('.home');
+			$.each($home,function(idx,item){
+				console.log(item)
+				$(this).on('mouseenter',function(){
+					$(this).show();
+				}).on('mouseleave',function(){
+					$(this).hide();
+				});
+			});
+		});	
 	</script>
 </head>
 <body>
@@ -80,25 +89,271 @@
 				<input type="button" id="searchBtn"/>
 			</div>
 			<ul class="headNav">
-				<li><a href="#">首页</a>
+				<li class="Nav"><a href="#">首页</a></li>
+				<li class="Nav"><a href="#">新近单品</a>
 					<div class="home">
 						<div class="home_left">
 							<p><a href="#">今日上新</a></p>
 							<p><a href="#">昨日上新</a></p>
 							<p><a href="#">本周上新</a></p>
-							<span>所有男仕新品</span>
-							<span>所有女士新品</span>
+							<span class="newon"><a href="#">所有男仕新品</a></span>
+							<span><a href="#">所有女士新品</a></span>
+						</div>
+						<ul class="Navlist">
+							<h4>男仕&nbsp;&nbsp;Man</h4>
+							<li><a href="#">包袋&nbsp;&nbsp;Bags</a></li>
+							<li><a href="#">配饰&nbsp;&nbsp;Accessories</a></li>
+							<li><a href="#">鞋履&nbsp;&nbsp;Shoes</a></li>
+							<li><a href="#">服装&nbsp;&nbsp;Clothes</a></li>
+						</ul>
+						<ul class="Navlist">
+							<h4>女士&nbsp;&nbsp;Woman</h4>
+							<li><a href="#">包袋&nbsp;&nbsp;Bags</a></li>
+							<li><a href="#">配饰&nbsp;&nbsp;Accessories</a></li>
+							<li><a href="#">鞋履&nbsp;&nbsp;Shoes</a></li>
+							<li><a href="#">服装&nbsp;&nbsp;Clothes</a></li>
+						</ul>
+						<div class="recommend">
+							<h4>今日推荐单品</h4>
+							<dl>
+								<dt><a href="#"><img src="img/index-nav01.jpg"></a></dt>
+								<dd><a href="#">Giuseppe Zanotti 朱塞... GIUSEPPE ZANOTTI DESIGN 漆皮 男仕 系代谢</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="img/index-nav02.jpg"></a></dt>
+								<dd><a href="#">Bottega Veneta 葆蝶家 女士 瓷粉色 牛皮 手提包</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="img/index-nav03.jpg"></a></dt>
+								<dd><a href="#">Versace 范思哲 牛皮 男仕 平底鞋</a></dd>
+							</dl>
 						</div>
 					</div>
 				</li>
-				<li><a href="#">新近单品</a></li>
-				<li><a href="#">女士</a></li>
-				<li><a href="#">男士</a></li>
-				<li><a href="#">童装</a></li>
-				<li><a href="#">腕表</a></li>
-				<li><a href="#">品牌</a></li>
-				<li><a href="#">特惠区</a></li>
-				<li><a href="#" class="Mzine">M潮流</a></li>
+				<li class="Nav"><a href="#">女士</a>
+					<div class="home">
+						<ul class="Navlist">
+							<h4>包袋&nbsp;&nbsp;Bags</h4>
+							<li><a href="#">所有包袋</a></li>
+							<li><a href="#">手提包&nbsp;&nbsp;Totes</a></li>
+							<li><a href="#">单肩包&nbsp;&nbsp;Shoulder Bags</a></li>
+							<li><a href="#">斜挎包&nbsp;&nbsp;Messenger Bags</a></li>
+							<li><a href="#">手拿包&nbsp;&nbsp;Clutch Bags</a></li>
+							<li><a href="#">旅行包&nbsp;&nbsp;Travel Bags</a></li>
+							<span class="sku"><a href="#">所有女士新品</a></span>
+						</ul>
+						<ul class="Navlist">
+							<h4>配饰&nbsp;&nbsp;Accessories</h4>
+							<li><a href="#">所有配饰</a></li>
+							<li><a href="#">钱包&nbsp;&nbsp;Wallets</a></li>
+							<li><a href="#">手表&nbsp;&nbsp;Watches</a></li>
+							<li><a href="#">太阳眼镜&nbsp;&nbsp;Sunglasses</a></li>
+							<li><a href="#">饰品&nbsp;&nbsp;Jewelry</a></li>
+							<li><a href="#">腰带&nbsp;&nbsp;Belts</a></li>
+							<li><a href="#">围巾&nbsp;&nbsp;Scarf</a></li>
+							<li><a href="#">数码周边&nbsp;&nbsp;Technology</a></li>
+							<li><a href="#">小配件&nbsp;&nbsp;Small Acc.</a></li>
+						</ul><ul class="Navlist">
+							<h4>鞋履&nbsp;&nbsp;Shoes</h4>
+							<li><a href="#">所有鞋履</a></li>
+							<li><a href="#">平底鞋&nbsp;&nbsp;Flat Shoes</a></li>
+							<li><a href="#">高跟鞋&nbsp;&nbsp;Pumps</a></li>
+							<li><a href="#">靴子&nbsp;&nbsp;Boots</a></li>
+						</ul>
+						<ul class="Navlist">
+							<h4>服装&nbsp;&nbsp;Clothes</h4>
+							<li><a href="#">所有服装</a></li>
+							<li><a href="#">卫衣&nbsp;&nbsp;Hoodies</a></li>
+							<li><a href="#">衬衫&nbsp;&nbsp;Shirt</a></li>
+							<li><a href="#">针织/毛衫&nbsp;&nbsp;Lnit/Sweater</a></li>
+							<li><a href="#">夹克&nbsp;&nbsp;Jacket</a></li>
+							<li><a href="#">大衣/风衣&nbsp;&nbsp;Coat/Dust Coat</a></li>
+							<li><a href="#">半裙&nbsp;&nbsp;Shirts</a></li>
+							<li><a href="#">连衣裙&nbsp;&nbsp;Dresses</a></li>
+							<li><a href="#">牛仔&nbsp;&nbsp;Denims</a></li>
+						</ul>
+						<div class="Clothes_shoes">
+							<a href="#"><img src="img/Clothes_shoes01.jpg"/></a>
+						</div>
+					</div>
+				</li>
+				<li class="Nav"><a href="#">男仕</a>
+					<div class="home">
+						<ul class="Navlist">
+							<h4>包袋&nbsp;&nbsp;Bags</h4>
+							<li><a href="#">所有包袋</a></li>
+							<li><a href="#">手提包&nbsp;&nbsp;Totes</a></li>
+							<li><a href="#">单肩包&nbsp;&nbsp;Shoulder Bags</a></li>
+							<li><a href="#">斜挎包&nbsp;&nbsp;Messenger Bags</a></li>
+							<li><a href="#">手拿包&nbsp;&nbsp;Clutch Bags</a></li>
+							<li><a href="#">旅行包&nbsp;&nbsp;Travel Bags</a></li>
+							<span class="sku"><a href="#">所有男仕新品</a></span>
+						</ul>
+						<ul class="Navlist">
+							<h4>配饰&nbsp;&nbsp;Accessories</h4>
+							<li><a href="#">所有配饰</a></li>
+							<li><a href="#">钱包&nbsp;&nbsp;Wallets</a></li>
+							<li><a href="#">手表&nbsp;&nbsp;Watches</a></li>
+							<li><a href="#">太阳眼镜&nbsp;&nbsp;Sunglasses</a></li>
+							<li><a href="#">饰品&nbsp;&nbsp;Jewelry</a></li>
+							<li><a href="#">腰带&nbsp;&nbsp;Belts</a></li>
+							<li><a href="#">围巾&nbsp;&nbsp;Scarf</a></li>
+							<li><a href="#">数码周边&nbsp;&nbsp;Technology</a></li>
+							<li><a href="#">小配件&nbsp;&nbsp;Small Acc.</a></li>
+						</ul>
+						<ul class="Navlist">
+							<h4>鞋履&nbsp;&nbsp;Shoes</h4>
+							<li><a href="#">所有鞋履</a></li>
+							<li><a href="#">平底鞋&nbsp;&nbsp;Flat Shoes</a></li>
+							<li><a href="#">休闲谢&nbsp;&nbsp;Casual S...</a></li>
+							<li><a href="#">正装鞋&nbsp;&nbsp;Business...</a></li>
+						</ul>
+						<ul class="Navlist">
+							<h4>服装&nbsp;&nbsp;Clothes</h4>
+							<li><a href="#">所有服装</a></li>
+							<li><a href="#">卫衣&nbsp;&nbsp;Hoodies</a></li>
+							<li><a href="#">T恤&nbsp;&nbsp;POLO T-Shirt/POLO</a></li>
+							<li><a href="#">衬衫&nbsp;&nbsp;Shirt</a></li>
+							<li><a href="#">西装套装&nbsp;&nbsp;Suit</a></li>
+							<li><a href="#">夹克&nbsp;&nbsp;Jacket</a></li>
+							<li><a href="#">大衣/风衣&nbsp;&nbsp;Coat/Dust Coat</a></li>
+							<li><a href="#">羽绒服/棉服&nbsp;&nbsp;Down Jacket</a></li>
+							<li><a href="#">休闲裤&nbsp;&nbsp;Casual Pants</a></li>
+							<li><a href="#">牛仔&nbsp;&nbsp;Denims</a></li>
+						</ul>
+						<div class="Clothes_shoes">
+							<a href="#"><img src="img/Clothes_shoes02.jpg"/></a>
+						</div>
+					</div>
+				</li>
+				<li class="Nav"><a href="#">童装</a>
+					<div class="home">
+						<ul class="Navlist">
+							<h4>儿童</h4>
+							<li><a href="#">T恤/POLO T-Shirt/POLO</a></li>
+							<li><a href="#">衬衫&nbsp;&nbsp;Shirt</a></li>
+							<li><a href="#">卫衣&nbsp;&nbsp;Hoodies</a></li>
+							<li><a href="#">羽绒服/棉服&nbsp;&nbsp;Down Jacket</a></li>
+							<li><a href="#">连衣裙&nbsp;&nbsp;Dresses</a></li>
+							<li><a href="#">休闲裤&nbsp;&nbsp;Casual Pants</a></li>
+							<span class="sku"><a href="#">所有童装商品</a></span>
+						</ul>
+						<ul class="Navlist">
+							<h4>热门品牌</h4>
+							<li><a href="#">Gucci&nbsp;古驰</a></li>
+							<li><a href="#">Kenzo&nbsp;高田贤三</a></li>
+							<li><a href="#">Little Dickins & jones</a></li>
+							<li><a href="#">RIDERS ON THE STORM</a></li>
+						</ul>
+						<div class="recommend">
+							<h4>今日推荐单品</h4>
+							<dl>
+								<dt><a href="#"><img src="img/kids01.jpg"></a></dt>
+								<dd><a href="#">Kenzo 高田贤三<br>Kenzo Baby 棉质 12-16岁<br>少年 卫衣</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="img/kids01.jpg"></a></dt>
+								<dd><a href="#">Kenzo 高田贤三<br>Kenzo Baby 棉质 12-16岁<br>少年 卫衣</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="img/kids03.jpg"></a></dt>
+								<dd><a href="#">Kenzo 高田贤三<br>Kenzo Baby 织物 儿童  系带鞋</a></dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li class="Nav"><a href="#">腕表</a>
+					<div class="home"">
+						<div class="home_left">
+							<p><a href="#">男仕腕表</a></p>
+							<p><a href="#">女士腕表</a></p>
+							<p><a href="#">石英表</a></p>
+							<p><a href="#">机械表</a></p>
+							<span class="newon"><a href="#">所有腕表商品</a></span>
+						</div>
+						<ul class="Navlist">
+							<h4>热门品牌</h4>
+							<li><a href="#">sevenfriday</a></li>
+							<li><a href="#">Calvin Klein&nbsp;卡尔文·克莱恩</a></li>
+							<li><a href="#">Daniel Wellington 丹尼尔·惠灵顿</a></li>
+							<li><a href="#">Tissot 天梭</a></li>
+							<li><a href="#">OMEGA 欧米茄</a></li>
+							<li><a href="#">Longines 浪琴</a></li>
+						</ul>
+						<div class="recommend">
+							<h4>今日推荐单品</h4>
+							<dl>
+								<dt><a href="#"><img src="img/biao01.jpg"></a></dt>
+								<dd><a href="#">Longines 浪琴<br>瑰丽系列 钢带 男士 机械表</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="img/biao02.jpg"></a></dt>
+								<dd><a href="#">Longines 浪琴<br>瑰丽系列 钢带 女士 机械表</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="img/biao03.jpg"></a></dt>
+								<dd><a href="#">Tissot 天梭<br>粉彩系列 牛皮 女士 石英表</a></dd>
+							</dl>
+						</div>
+					</div>
+				</li>
+				<li class="Nav"><a href="#">品牌</a>
+					<div class="home">
+						<ul class="Navlist">
+							<h4>国际大牌 Luxury Brand</h4>
+							<li><a href="#">Bottega Veneta 葆蝶家</a></li>
+							<li><a href="#">Givenchy 纪梵希</a></li>
+							<li><a href="#">Emporio Armani 安普里奥·阿玛尼</a></li>
+							<li><a href="#">VERSACE JEANS 范思哲牛仔</a></li>
+							<li><a href="#">BVLGARI 宝格丽</a></li>
+							<li><a href="#">Miu Miu 缪缪</a></li>
+							<li><a href="#">TAG Heuer 豪雅</a></li>
+							<li><a href="#">Lanvin 朗凡</a></li>
+							<span class="privilege"><a href="#">所有国际大牌商品</a></span>
+							<span class="sku"><a href="#">所有设计师品牌商品</a></span>
+						</ul>
+						<ul class="Navlist">
+							<h4>设计师品牌 Designer Brand</h4>
+							<li><a href="#">Johnstons 约翰斯顿</a></li>
+							<li><a href="#">Merc</a></li>
+							<li><a href="#">Dickins & Jones</a></li>
+							<li><a href="#">Label Lab</a></li>
+							<li><a href="#">Simon Carter</a></li>
+							<li><a href="#">SAMO ONDOH</a></li>
+							<li><a href="#">CR7 Cristiano Ronaldo</a></li>
+							<li><a href="#">sevenfriday</a></li>
+						</ul>
+						<ul class="brand-pic">
+							<li><a href="#"><img src=""></a></li>
+							<li><a href="#"><img src=""></a></li>
+						</ul>
+						<ul class="brand-pic">
+							<li><a href="#"><img src=""></a></li>
+							<li><a href="#"><img src=""></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="Nav"><a href="#">特惠区</a>
+					<div class="home"">
+						<ul class="Navlist">
+							<h4>国际大牌 Luxury Brand</h4>
+							<li><a href="#">Bally 巴利</a></li>
+							<li><a href="#">Gucci 古驰</a></li>
+							<li><a href="#">Balenciaga 巴黎世家</a></li>
+							<li><a href="#">Burberry 博柏利</a></li>
+							<li><a href="#">Miu Miu 缪缪</a></li>
+							<li><a href="#">Dior 迪奥</a></li>
+							<li><a href="#">Prada 普拉达</a></li>
+							<li><a href="#">Bottega Veneta 葆蝶家</a></li>
+							<span class="privilege"><a href="#">所有男士特惠</a></span>
+							<span class="sku"><a href="#">所有女士特惠</a></span>
+						</ul>
+						<div>
+						
+						</div>
+					</div>
+				</li>
+				<li class="Nav"><a href="#" class="Mzine">M潮流</a></li>
 			</ul>
 		</div>
 	</div>
