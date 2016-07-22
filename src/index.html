@@ -42,74 +42,71 @@
 			});
 		});
 	</script>
+	
 	<script>
-//---------------------------banner-------
-		$(function(){
-			var timer;
-			var $banner = $("#ban-pic");
-			var $movePic = $banner.find('li');
-			console.log($movePic.size())
-			var $picLeft = $('.ban-picLeft');
-			var $picRight = $('.ban-picRight');
-
-			var index = 0;
-			timer = setInterval(show,2000);
-
-
-			function show(){
-				index++;
-				console.log(index)
-				if(index < 0){
-					index = 4;
-				};
-
-				if (index > 4){
-					index = 0;
-				};
+	//---------------------------banner-------
+			$(function(){
+				var timer;
+				var $banner = $("#ban-pic");
+				var $movePic = $banner.find('ul');
 				
-				$movePic.eq(index-1).animate({left:-960,},function(){
-					$movePic.eq(index).siblings("li").css({
-						zIndex:0,
-						left:960
+				var $picLeft = $('.ban-picLeft');
+				var $picRight = $('.ban-picRight');
+	
+				var index = 0;
+				var speed = 960;
+				timer = setInterval(init,2000);
+	
+				function init(){
+					index++;
+					if(index>5){
+						$movePic.css('left',0);
+						index = 1;
+					};
+					show();
+				}
+				function show(){
+					$movePic.animate({
+						left : -index*speed
 					});
+				};
+
+				function move(){
+					index--;
+					if(index<0){
+						index = 4;
+						$movePic.css('left',-4740);
+					};
+					show();
+				};
+	
+	
+				$banner.hover(function(){
+					clearInterval(timer);
+					$picLeft.show();
+					$picRight.show();
+				},function(){
+					timer = setInterval(init,4000);
+					$picLeft.hide();
+					$picRight.hide();
 				});
-				$movePic.eq(index).animate({
-					left:0,
-					zIndex:5
+	
+				$picLeft.on('click',function(){
+					move();
+				}).hover(function(){
+					$(this).css('background',"url('css/img/jt.png')")
+				},function(){
+					$(this).css('background',"url('css/img/jt.png') 0 -201px")
 				});
-				
-				
-			};
-
-
-			$banner.hover(function(){
-				clearInterval(timer);
-				$picLeft.show();
-				$picRight.show();
-			},function(){
-				timer = setInterval(show,2000);
-				$picLeft.hide();
-				$picRight.hide();
+	
+				$picRight.on('click',function(){
+					init();
+				}).hover(function(){
+					$(this).css('background',"url('css/img/jt.png') 0 -66px")
+				},function(){
+					$(this).css('background',"url('css/img/jt.png') 0 -134px")
+				});
 			});
-
-			$picLeft.on('click',function(){
-				index--;
-				show();
-			}).hover(function(){
-				$(this).css('background',"url('css/img/jt.png')")
-			},function(){
-				$(this).css('background',"url('css/img/jt.png') 0 -201px")
-			});
-
-			$picRight.on('click',function(){
-				index++;
-				show();
-			}).hover(function(){
-				$(this).css('background',"url('css/img/jt.png') 0 -66px")
-			},function(){
-				$(this).css('background',"url('css/img/jt.png') 0 -134px")
-			});
-		});
 	</script>
 </head>
 <body>
@@ -466,15 +463,16 @@
 <!--*********************banner***************************-->
 	<div class="banner">
 		<div id="ban-pic">
-			<ul>
-				<li style="left:0;"><a href="#"><img src="img/kv1.jpg" alt=""></a></li>
+			<ul style="left:-960px;">
+				<li><a href="#"><img src="img/kv1.jpg" alt=""></a></li>
 				<li><a href="#"><img src="img/kv2.jpg" alt=""></a></li>
 				<li><a href="#"><img src="img/kv3.jpg" alt=""></a></li>
 				<li><a href="#"><img src="img/kv4.jpg" alt=""></a></li>
 				<li><a href="#"><img src="img/kv5.jpg" alt=""></a></li>
-				<span class="ban-picLeft"></span>
-				<span class="ban-picRight"></span>
+				<li><a href="#"><img src="img/kv1.jpg" alt=""></a></li>
 			</ul>
+			<span class="ban-picLeft"></span>
+			<span class="ban-picRight"></span>
 		</div>
 	</div>
 <!--*********************product***************************-->
