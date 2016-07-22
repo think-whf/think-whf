@@ -28,21 +28,15 @@ a:hover{color:#8e0c3a;}
 .headRight .hotLine{margin:10px 0 8px;}
 
 /*--------------fousUs-------------------*/
-<<<<<<< HEAD
-.headRight .fousUs{margin:10px 3px 8px 24px;position: relative;}
-.fousUs span{float: left;width:15px;height:14px;background: url("img/headico01.png") no-repeat 0 -15px;margin-right:2px;}
-.fousUs .fousUs_link{width:166px;position: absolute;right:0;top:36px;z-index: 7;border:1px solid #ccc;background: #fff;display: none;}
-=======
 .headRight .fousUs{padding:10px 3px 8px 24px;position: relative;}
-.fousUs span{float: left;width:15px;height:14px;background: url("img/headico01.png") no-repeat 0 -15px;margin-right:2px;}
+.fousUs span{float: left;width:15px;height:14px;margin-right:2px;}
 .fousUs .fousUs_link{width:166px;position: absolute;right:0;top:34px;z-index: 7;border:1px solid #ccc;background: #fff;display: none;}
->>>>>>> e483ac8e818c3c024f56bdc21d504556578daa03
 .fousUs .fousUs_link li{float: left;}
 .fousUs .fousUs_link li a{float: left;padding: 11px 17px;text-align: center;}
 .fousUs .fousUs_link li a img{margin-left:10px;}
 /*--------------shoppingCart-------------------*/
 .headRight .shoppingCart{position: relative;height:30px;width:144px;margin-left:5px; }
-.shopping{display:block;overflow: hidden;height:30px;margin-top:4px;border:1px solid #f4f4f4;padding-left:23px;position: absolute;z-index: 8;}
+.shopping{display:block;overflow: hidden;height:32px;margin-top:2px;border:1px solid #f4f4f4;padding-left:23px;position: absolute;z-index: 8;}
 .cartLeft{width:95px;border-right:1px solid #ccc;margin-top:7px;}
 .cartLeft .shopping_bg{float:left;width:22px;height:16px;background: url("img/headico01.png") no-repeat 0 -30px;margin-right:6px;}
 .cartRight{padding: 5px 5px 0 6px;float: left;}
@@ -87,6 +81,21 @@ a:hover{color:#8e0c3a;}
 .recommend dl{float: left;width:160px;margin:0 19px 15px 19px;}
 .recommend dl a:hover{color:#8e0c3a;}
 
+/*-----------------brand-pic-------------------*/
+.brand-pic{float: left;padding:0 10px;}
+.brand-pic h4{height:30px;line-height:30px;color:#8e0c3a;font-weight: bold;margin-bottom: 4px;}
+.brand-pic li a{display:block;width: 210px;height:116px;margin-bottom: 8px;position: relative;}
+.brand-pic li a img{width: 210px;height:116px;}
+.brand-pic li a p{width:210px;height:45px;text-align: center;position: absolute;left:0;top:66px;background:rgba(0,0,0,0.6);color:#fff;line-height: 18px;padding-top:5px;}
+
+/*-----------------youhui-------------------*/
+.youhui{margin-left:102px;float: left;width: 310px;}
+.youhui_set{margin-left:36px;}
+.youhui h4{height:30px;line-height:30px;color:#8e0c3a;font-weight: bold;margin-bottom: 4px;}
+.youhui ul{float: left;margin-right:34px;}
+.youhui ul a{display: block;heihgt:22px;line-height: 22px;}
+.youhui .youhui_pic{margin-top:10px;}
+.youhui .youhui_pic img{width: 310px;height:170px;}
 /*-----------------sku-------------------*/
 .sku,.privilege{display: block;height:16px;line-height:16px;border-bottom: 1px solid #ccc;padding:4px 0;position: absolute;top:268px;left:10px;}
 .privilege{top:240px;}

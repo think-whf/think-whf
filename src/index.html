@@ -12,10 +12,11 @@
 			var $fousUs = $('.fousUs');
 			var $link = $('.fousUs_link');
 			$fousUs.hover(function(){
-				console.log("sasd")
 				$link.show();
+				$fousUs.find('span').css({background:"url('css/img/headico01.png') no-repeat -20px -15px"});
 			},function(){
 				$link.hide();
+				$fousUs.find('span').css({background:"url('css/img/headico01.png') no-repeat 0 -15px"});
 			});
 			//shoppingCart
 			var $cart = $('.shoppingCart');
@@ -27,7 +28,7 @@
 				$cartList.hide();
 			});
 
-
+//--------------Nav-------
 			var $Nav = $('.Nav');
 			console.log($Nav)
 			$.each($Nav,function(idx,item){
@@ -325,13 +326,23 @@
 							<li><a href="#">CR7 Cristiano Ronaldo</a></li>
 							<li><a href="#">sevenfriday</a></li>
 						</ul>
-						<ul class="brand-pic">
-							<li><a href="#"><img src=""></a></li>
-							<li><a href="#"><img src=""></a></li>
+						<ul class="brand-pic" style="margin-left:80px;">
+							<h4>今日推荐大牌</h4>
+							<li><a href="#"><img src="img/brand-pic01.jpg"/>
+								<p>Burberry<br>博柏利</p>
+							</a></li>
+							<li><a href="#"><img src="img/brand-pic03.jpg"/>
+								<p>Just Cavalli<br>卡沃利</p>
+							</a></li>
 						</ul>
 						<ul class="brand-pic">
-							<li><a href="#"><img src=""></a></li>
-							<li><a href="#"><img src=""></a></li>
+							<h4>今日推荐设计师品牌</h4>
+							<li><a href="#"><img src="img/brand-pic02.jpg"/>
+								<p>Boy London<br>伦敦男孩</p>
+							</a></li>
+							<li><a href="#"><img src="img/brand-pic04.jpg"/>
+								<p>LOUIS QUATORZE<br>瑞克朵丝</p>
+							</a></li>
 						</ul>
 					</div>
 				</li>
@@ -350,8 +361,29 @@
 							<span class="privilege"><a href="#">所有男士特惠</a></span>
 							<span class="sku"><a href="#">所有女士特惠</a></span>
 						</ul>
-						<div>
-						
+						<div class="youhui">
+							<h4>男仕&nbsp;&nbsp;Man</h4>
+							<ul>
+								<li><a href="#">包袋 Bags</a></li>
+								<li><a href="#">配饰 Accessories</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">鞋履 Shoes</a></li>
+								<li><a href="#">服装 Clothes</a></li>
+							</ul>
+							<div class="youhui_pic"><a href="#"><img src="img/nav-clothing02.jpg"></a></div>
+						</div>
+						<div class="youhui youhui_set">
+							<h4>女士&nbsp;&nbsp;Woman</h4>
+							<ul>
+								<li><a href="#">包袋 Bags</a></li>
+								<li><a href="#">配饰 Accessories</a></li>
+							</ul>
+							<ul>
+								<li><a href="#">鞋履 Shoes</a></li>
+								<li><a href="#">服装 Clothes</a></li>
+							</ul>
+							<div class="youhui_pic"><a href="#"><img src="img/nav-clothing01.jpg"></a></div>
 						</div>
 					</div>
 				</li>
