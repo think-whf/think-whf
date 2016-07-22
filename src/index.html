@@ -20,17 +20,18 @@
 			});
 			//shoppingCart
 			var $cart = $('.shoppingCart');
-			console.log($cart);
 			var $cartList = $('.cartList');
 			$cart.hover(function(){
 				$cartList.show();
 			},function(){
 				$cartList.hide();
 			});
-
-//--------------Nav-------
+		});	
+	</script>
+	<script>
+		$(function(){
+//---------------------------Nav-------
 			var $Nav = $('.Nav');
-			console.log($Nav)
 			$.each($Nav,function(idx,item){
 				var $home = $(item).find('.home');
 				$(item).on('mouseenter',function(){
@@ -39,12 +40,83 @@
 					$home.hide();
 				});
 			});
-		});	
+		});
+	</script>
+	<script>
+//---------------------------banner-------
+		$(function(){
+			var timer;
+			var $banner = $("#ban-pic");
+			var $movePic = $banner.find('li');
+			console.log($movePic.size())
+			var $picLeft = $('.ban-picLeft');
+			var $picRight = $('.ban-picRight');
+
+			var index = 0;
+			timer = setInterval(show,2000);
+
+
+			function show(){
+				index++;
+				console.log(index)
+				if(index < 0){
+					index = 4;
+				};
+
+				if (index > 4){
+					index = 0;
+				};
+				
+				$movePic.eq(index-1).animate({left:-960,},function(){
+					$movePic.eq(index).siblings("li").css({
+						zIndex:0,
+						left:960
+					});
+				});
+				$movePic.eq(index).animate({
+					left:0,
+					zIndex:5
+				});
+				
+				
+			};
+
+
+			$banner.hover(function(){
+				clearInterval(timer);
+				$picLeft.show();
+				$picRight.show();
+			},function(){
+				timer = setInterval(show,2000);
+				$picLeft.hide();
+				$picRight.hide();
+			});
+
+			$picLeft.on('click',function(){
+				index--;
+				show();
+			}).hover(function(){
+				$(this).css('background',"url('css/img/jt.png')")
+			},function(){
+				$(this).css('background',"url('css/img/jt.png') 0 -201px")
+			});
+
+			$picRight.on('click',function(){
+				index++;
+				show();
+			}).hover(function(){
+				$(this).css('background',"url('css/img/jt.png') 0 -66px")
+			},function(){
+				$(this).css('background',"url('css/img/jt.png') 0 -134px")
+			});
+		});
 	</script>
 </head>
 <body>
-	<!--*********************header***************************-->
+<!--*********************公共头部***************************
+	<!--*********************header**************************-->
 	<div class="header">
+		<!--*********************headerBar***********************-->
 		<div class="headBar">
 			<div class="head">
 				<div class="headLeft">
@@ -391,5 +463,59 @@
 			</ul>
 		</div>
 	</div>
+<!--*********************banner***************************-->
+	<div class="banner">
+		<div id="ban-pic">
+			<ul>
+				<li style="left:0;"><a href="#"><img src="img/kv1.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/kv2.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/kv3.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/kv4.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/kv5.jpg" alt=""></a></li>
+				<span class="ban-picLeft"></span>
+				<span class="ban-picRight"></span>
+			</ul>
+		</div>
+	</div>
+<!--*********************product***************************-->
+<div class="product">
+<!--*********************timeLine***************************-->
+	<div class="timeLine">
+	 	<p><a href="#"><img src="img/timeline03.jpg"/></a></p>
+	</div>	
+<!--*********************Buy***************************-->
+	<div class="Moldbaby">
+		<div class="Buy">
+			<div class="Buy-line"></div>
+			<img src="img/znqt.gif"/>
+		</div>
+		<div class="dress">
+			<a href="#"><img src="img/0720.jpg" alt=""></a>
+		</div>
+	</div>
+<!--*********************ManSeries***************************-->
+	<div class="manSeries">
+		<img  class="p2Pic" src="img/p2.jpg" alt=""/>
+		<div class="clothing">
+			<a href="#">
+				<img src="img/p3.jpg" alt=""/>
+			</a>
+			<img class="p3-bg" src="img/p3-bg.jpg"/>
+		</div>
+		<dl class="commodity">
+			<dt>
+				<a href="">
+					<img src="img/manyi01.jpg" alt=""/>
+				</a></dt>
+			<dd class="dity-brand"><a href="#">Givenchy 纪梵希</a></dd>
+			<dd class="dity-money">活动价 ￥ 1340.00 <span>￥2300.00</span></dd>
+			<dd class="dity-gou">
+				<a href="#">
+					<img src="img/xuangou.jpg" alt=""/>
+				</a>
+			</dd>
+		</dl>
+	</div>
+</div>
 </body>
 </html>
