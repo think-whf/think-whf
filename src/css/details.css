@@ -1,0 +1,61 @@
+/*---------------------product---------------------*/
+.product{width:100%;overflow: hidden;}
+.pro{width:960px;margin:0 auto;padding-top:16px;overflow: hidden;}
+
+.proList{float: left;overflow: hidden;height:430px;position: relative;padding-top:22px; }
+.proTopJt,.proBomJt{display: block;width: 50px;height:16px;margin-left:5px;position: absolute;left:0;top:0;}
+.proTopJt{background:url("img/projt.gif") no-repeat;}
+.proBomJt{background:url("img/projt.gif") no-repeat 0 -16px;top:auto;bottom:0;}
+
+.proList li{width:50px;height:60px;margin-top:10px;}
+.proList img{width:50px;height:60px;}
+
+/*---------------------pro-pic---------------------*/
+.pro-pic{width:384px;height:454px;margin-left:45px;margin-right:64px;overflow: hidden;float: left;position: relative;}
+.pro-pic img{width:384px;height:454px;position: absolute;left:0;top:0;}
+
+/*---------------------pro-tips---------------------*/
+.pro-tips{float: left;overflow: hidden;width:390px;}
+.pro-tips h3{line-height: 24px;font-weight: bold;color:#000;font-size: 16px;}
+.pro-tips h3 span{display:inline-block;font-weight: 200;color:#6c6c6c;font-size: 14px;}
+
+.pro-tips p{margin:13px 0;}
+.huaxian{text-decoration: line-through;}
+.xianjia{color:#982a3a;}
+/*---------------------size---------------------*/
+
+.size{overflow: hidden;}
+.size span{float: left;width:44px;height:22px;border:3px solid #d60000;margin-right:3px;line-height: 22px;text-align: center;color:#333;}
+.size .size-xxl{margin-right:0;}
+/*---------------------pro-Buy---------------------*/
+
+.pro-tips .pro-Buy{overflow:hidden;height:32px;margin:28px 0;}
+.pro-Buy button{float: left;border:none;height:32px;}
+.goumai{width:120px;background:url("img/mai.gif") no-repeat;margin-right:8px;}
+.gouwudai{width:138px;background:url("img/gouwudai.gif") no-repeat;}
+/*---------------------share---------------------*/
+.share{width:388px;height:40px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;line-height: 40px;position: relative;background:url();}
+.share b{float: left;font-weight: 200;}
+.shSina,.shWeixin,.shDou{float: left;width:16px;height:16px;margin-top:13px;margin-left:3px;}
+
+.shSina{background: url("img/share.png") no-repeat 0px -104px;;}
+.shWeixin{background: url("img/share.png") no-repeat 0px -1612px;}
+.shDou{background: url("img/share.png") no-repeat 0px -468px;}
+.share .shoucan{float: right;height:16px;overflow:hidden;margin-top:16px;background:url("img/coll.gif") no-repeat 0 -25px;padding-left:22px; line-height: 16px;}
+.share .shoucan:hover{background-position-y:0; }
+
+/*---------------------details-msg---------------------*/
+.details-msg{width: 960px;height:40px;border-bottom:1px solid #333;margin:0 auto;margin-top:44px; }
+.pro-msg{float: left;width:440px;margin-right:180px;}
+.details-msg li{float: left;width:140px;height:40px;background:#333;text-align: center;line-height: 40px;color:#fff;font-size: 14px;margin-right:5px;}
+.pro-jiaru{float: right;}
+.pro-jiaru li{margin:0 0 0 5px;}
+.pro-jiaru .redBuy{background: #961644;}
+.pro-jiaru .Buybag{background:#505050;}
+
+/*---------------------proTuiJian---------------------*/
+.proTuiJian{width:960px;overflow: hidden;margin: 0 auto;border-top:1px dashed #ccc;margin-top:68px;}
+.yiTuiJian{width:168px;text-align: center;padding-bottom:24px;margin-bottom:5px;float: left;margin-right:30px;margin-top: 40px;}
+.rightYi{margin-right:0;}
+.yiTuiJian-brand a{color:#000;font-weight: bold;Hheight:18px;line-height: 18px;}
+.yiTuiJian-money {color:#a52a2a;margin-bottom: 14px;}
