@@ -59,7 +59,7 @@ a:hover{color:#8e0c3a;}
 .headNav{float: left;border-bottom:1px solid #333;position: relative;}
 .headNav .Nav{float: left;}
 .headNav .Nav>a{float: left;padding: 0 36px;height:32px;line-height: 32px;color:#333;font-size: 14px;}
-.headNav .Nav>a.Mzine{background:#8e0c3a;color:#fff;padding:0 38px;}
+.headNav .Nav>a.Mliu{background:#8e0c3a;color:#fff;padding:0 38px;}
 .headNav .Nav>a:hover{background:#8e0c3a;color:#fff;}
 /*-----------------home-------------------*/
 .home{width:958px;height:305px;border:1px solid #ccc;position: absolute;left:0;top:33px;padding-top:10px;display: none;background: #fff;z-index: 10;}
@@ -125,14 +125,109 @@ a:hover{color:#8e0c3a;}
 .Buy-line{border-bottom: 1px solid #999;position: absolute;width:960px;top:33px;z-index: 7;}
 .dress{margin-top:18px;overflow: hidden;}
 
-/*------------------ManSeries----------------------------*/
-.manSeries{width:960px;margin:0 auto;}
-.manSeries .p2Pic{margin-bottom: 56px}
-.clothing{float: left;position: relative;margin-right:30px;}
-.clothing .p3-bg{position: absolute;top:-34px;left:0;}
+/*------------------ManSeries WomenSeries----------------------------*/
+.manSeries,.WomenSeries{width:960px;margin:0 auto;overflow: hidden; }
+.clothing{margin-top: 56px;float: left;position: relative;margin-right:30px;}
+.clothing .pic-bg{position: absolute;top:-34px;left:0;}
+.clothing .biaozhi-bg{position: absolute;right:0;top:-34px;}
 
-.commodity{float:left;border:1px solid #000;text-align: center;padding: 0 60px;padding-bottom:22px; }
+.clothing-show{margin-top: 56px;float:left;overflow:hidden;margin-right: 5px;}
+.commodity{width:168px;border:1px solid #000;text-align: center;padding: 0 50px;padding-bottom:24px;margin-bottom:5px;}
 .dity-brand a{color:#000;font-weight: bold;Hheight:18px;line-height: 18px;}
 .dity-money {color:#a52a2a;margin-bottom: 14px;}
 .dity-money span{color:#808080;text-decoration: line-through;margin-left:5px;}
 .dity-gou a img{margin-left:42px;}
+.rightCloth{margin-left:30px;margin-right:0;}
+
+/*------------------hot-sale----------------------------*/
+.hot-sale{width:960px;margin:0 auto;overflow: hidden;margin-top:26px;margin-bottom: 20px;}
+.topWu-three{float:left;margin: 36px 6px 10px 6px;}
+.topWu-three li{float: left;}
+.topWu-three a{float: left;margin-right:10px;overflow: hidden;}
+
+.topWu-two{float:left;}
+.topWu-two li{float: left;}
+.topWu-two a{float: left;margin-right:13px;overflow: hidden;}
+
+/*------------------sold----------------------------*/
+.sold{width:960px;margin:0 auto;overflow: hidden;}
+.line-bt{text-align: center;line-height: 22px;width:960px;font-size:16px;color:#333;position:relative;}
+.line_Lbt,.line_Rbt{position: absolute;width:347px;border-bottom: 1px solid #ccc;top:22px;left:0;}
+.line_Rbt{left:auto;right:0;}
+
+
+/*------------------sold-code----------------------------*/
+.sold-code{float: left;position: relative;margin-bottom: 26px;}
+.sold-code li{float: left;padding: 0 15px;text-align: center;}
+.sold-code dl dd a{color:#333;}
+.sold-code dd a span{color:#ccc;}
+
+
+/*------------------Mzine----------------------------*/
+.Mzine{width: 960px;margin:0 auto;overflow: hidden;}
+.zineList{float: left;width:960px;overflow: hidden;margin: 20px 0;}
+.zineList li{float: left;margin-right:4px;}
+/*------------------Sub----------------------------*/
+.Sub{width: 960px;margin:0 auto;}
+.zineEmail{float: left;width:30px;border:1px solid #ccc;border-right:none;height:28px;background:url("img/footico.gif") no-repeat -40px -29px;margin-left:40px;}
+#eamilTxt{width:134px;height:28px;border:1px solid #ccc;border-left:none;float: left;color:#333;text-indent: 10px;}
+#eamilBtn{width:68px;height:30px;margin-left:6px;border:none;background:#333;font-size:12px;color:#fff;line-height:28px;text-align: center;float: left;}
+
+/*------------------End----------------------------*/
+.End{width: 100%;overflow: hidden;}
+.EndMsg{width:960px;margin:0 auto;overflow: hidden;}
+/*------------------Endlabel----------------------------*/
+.EndLabel{width:960px;padding: 26px 0;overflow: hidden;border-top: 1px solid #ccc;}
+.EndLabel ul{float: left;border-right:1px solid #ccc;}
+.end_lab{width:380px; height:84px;}
+.end_lab li{float: left;margin-right:35px;}
+.end_lab li h5{font-size:14px;font-weight: bold;color:#7a7a7a;margin-bottom: 10px;}
+.end_lab a{display: block;height:18px;line-height: 18px;}
+
+.end_phone{padding: 0 32px;padding-top:10px;height:74px;}
+.end_phone p{text-align: center;font-size: 20px;}
+
+.dingyue{height:84px;padding: 0 24px;}
+.dingyue h5{height:22px;font-size:14px;line-height: 22px;font-weight: blod;text-align: center;color:#333;}
+.dingyue .dingTxt{width:134px;height:22px;color:#ccc;border:1px solid #ccc;margin-bottom: 6px;}
+.dingyue .dingBtn{border:none;width:48px;height:20px;background:#5a5a5a;color:#fff;margin-left:40px;text-align: center;}
+
+.twoMa{border:none;height:84px;padding: 0 10px;}
+.twoMa li{float: left;margin:0 5px;}
+
+/*------------------EndList----------------------------*/
+.endList{padding: 0 48px;width:960px;background: #ccc;overflow: hidden;}
+.endList li{float: left;}
+.endList li a{float:left;width:90px;height:22px;line-height: 22px;text-align: center;}
+.endList li a:hover{color:#fff;background: #333;}
+
+/*------------------meiTiList----------------------------*/
+.meiTiList{float: left;width: 960px;height:24px;margin:24px 0 15px 0;overflow: hidden;}
+.meiTiList li{float: left;}
+.meiTiList li a{float: left;margin-right:10px;}
+
+.hui{width: 22px;height:23px;background:url(img/foot_pic.jpg) no-repeat 0 -110px;margin-left:190px;}
+.hui:hover{background:url(img/foot_pic.jpg) no-repeat ;}
+
+.meiTiList li .blank{width:100px;height:22px;background:url(img/foot_pic.jpg) no-repeat 0 -155px;margin-right:50px;}
+.meiTiList li .blank:hover{background:url(img/foot_pic.jpg) no-repeat 0 -45px;}
+
+.zhichi{overflow:hidden;height:22px;line-height:22px;color:#6c6c6c;margin-right:10px;}
+
+.sina{width:73px;height:22px;background:url(img/foot_pic.jpg) no-repeat -182px -180px;}
+.sina:hover{background:url(img/foot_pic.jpg) no-repeat -182px -70px;}
+
+.souHu{width:73px;height:23px;background:url(img/foot_pic.jpg) no-repeat -66px -110px;}
+.souHu:hover{background:url(img/foot_pic.jpg) no-repeat -66px 0;}
+
+.moveXi{width:84px;height:22px;background:url(img/foot_pic.jpg) no-repeat -5px -179px;}
+
+.club{width:85px;height:22px;background:#5a5a5a;color:#fff;font-weight: bold;text-align: center;line-height: 22px;}
+.club:hover{color:#fff;}
+
+
+/*------------------webMsg----------------------------*/
+.webMsg,.gongshang{width:960px;overflow: hidden;margin:10px 0; }
+.webMsg p{height:14px;line-height: 14px;text-align: center;width:960px;}
+.gongshang a{float: left;margin-right:20px;}
+.gongshang .green{margin-left:410px;}
