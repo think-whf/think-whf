@@ -2,7 +2,8 @@ $(function(){
 	//详情页放大镜
 	var $proList = $(".proList").find('li');
 	var $proPic = $('.pro-pic').find('img');
-	var $setBig = $('.setBig').find('img');
+	var $setBig = $('.setBig');
+	var $bigTu = $('.setBig').find("img");
 	//小图片跟商品的联系
 	$.each($proList,function(idx,item){
 		$(this).on("mouseenter",function(){
@@ -11,42 +12,113 @@ $(function(){
 			}).siblings().css({
 				border:"2px solid #fff"
 			});
-			$proPic.eq(idx).css('zIndex',5).siblings().css('zIndex',0);
+			$proPic.css('zIndex',0).eq(idx).css('zIndex',5);
+			$setBig.find("img").css('zIndex',0).eq(idx).css('zIndex',5);
 		});
 	});
 	//放大镜
-	$.each($proPic,function(idx,item){
-		$(this).on("mouseenter",function(e){
-			$setBig.eq(idx).css('zIndex',5).siblings("img").css('zIndex',0);
-			$(".fangda").show();	
-			
-		}).on('mousemove',function(e){
-			//e.offsetX
-			var offX = ($(".fangda").width())/2;
-			var offY = ($(".fangda").height())/2;
-			var fdleft = e.pageX;
-			var fdTop = e.pageY;
-			var fdX = $(this).offset().left;
-			var fdY = $(this).offset().top;
+	$proPic.on("mouseenter",function(e){
+			$(".fangda").show();
+			$setBig.show();
+			$proPic.on('mousemove',function(e){
+				//e.offsetX
+				var offX = ($(".fangda").outerWidth())/2;
+				var offY = ($(".fangda").outerHeight())/2;
 
-			$(".fangda").css({
-				left:fdleft-fdX-offX,
-				top:fdTop-fdY-offY
-			});
-			if(fdleft<offX+fdX){
+				var fdleft = $(this).outerWidth();
+				var fdTop = $(this).outerHeight();
+
+
+				var fdX = $(this).offset().left;
+				var fdY = $(this).offset().top;
+
+				var Xbianju = e.pageX - fdX-offX;
+				var Ybianju = e.pageY - fdY-offY;
+				if(Xbianju<0){
+					Xbianju = 0;
+				}		
+				
 				$(".fangda").css({
-					left:0
+					left : Xbianju,
+					top : Ybianju
 				});
-			};
-			if(fdTop<offY+fdY){
-				$(".fangda").css({
-					top:0
+				var bigX = $(".fangda").position().left;
+				var bigY = $(".fangda").position().top;
+
+
+				$bigTu.css({
+					left : -bigX*2,
+					top : -bigY*2
 				});
-			};
-			if()
-			
+				/*if(e.clientX<offX+fdX){
+					$(".fangda").css({
+						left:0
+					});
+				};
+				if(e.clientY<offY+fdY){
+					$(".fangda").css({
+						top:0
+					});
+				};*/
+				//if()
+				return false;
+			});			
 		}).on('mouseleave',function(){
 			$(".fangda").hide();
+			$setBig.hide();
+		});	
+
+
+});
+//详情页切换窗口
+$(function(){
+	var $msg = $('.pro-msg');
+	var $content = $('#pro-content').children("div");
+	$msg.on("click","li",function(){
+		var idx = $(this).index();
+		$content.hide().eq(idx).show();
+		$(this).css({
+			background:"#333",
+			color:"#fff"
+		}).siblings("li").css({
+			background:"#e6e6e6",
+			color:"#333"
 		});
 	});
+});
+
+//侧边栏事件
+$(function(){
+	$(window).on("scroll",function(){
+
+		var cbY = $(window).scrollTop();
+		var winSize = $(window).height();
+
+
+		var $consult = $(".consult");
+		var gouWu = $(".gouwu");
+		var msgX = $(".details-msg").offset().left;
+		var msgY = $(".details-msg").offset().top+$(".details-msg").height();
+
+		$consult.css({
+			top:cbY +0.6*winSize
+		});
+		if(cbY>msgY){
+			gouWu.show();
+			gouWu.css({
+				left:msgX,
+				top:cbY
+			})
+		}else{
+			gouWu.hide();
+		}
+	});
+
+});
+//尺码事件	
+$(function(){
+	var $Ma = $(".size");
+	$Ma.on("click","span",function(){
+		$(this).css("borderColor","#d60000").siblings().css("borderColor","#ccc");
+	})
 });
