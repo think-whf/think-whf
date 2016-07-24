@@ -1,19 +1,23 @@
 /*---------------------product---------------------*/
 .product{width:100%;overflow: hidden;}
-.pro{width:960px;margin:0 auto;padding-top:16px;overflow: hidden;}
+.pro{width:960px;margin:0 auto;padding-top:16px;overflow: hidden;position: relative;}
 
 .proList{float: left;overflow: hidden;height:430px;position: relative;padding-top:22px; }
 .proTopJt,.proBomJt{display: block;width: 50px;height:16px;margin-left:5px;position: absolute;left:0;top:0;}
 .proTopJt{background:url("img/projt.gif") no-repeat;}
 .proBomJt{background:url("img/projt.gif") no-repeat 0 -16px;top:auto;bottom:0;}
 
-.proList li{width:50px;height:60px;margin-top:10px;}
+.proList li{width:50px;height:60px;margin-top:10px;border:2px solid #fff;}
 .proList img{width:50px;height:60px;}
 
 /*---------------------pro-pic---------------------*/
 .pro-pic{width:384px;height:454px;margin-left:45px;margin-right:64px;overflow: hidden;float: left;position: relative;}
 .pro-pic img{width:384px;height:454px;position: absolute;left:0;top:0;}
+.fangda{width:120px;height:120px;display:none;background:rgba(214,214,214,0.9);border:1px solid #000;position: absolute;z-index:20;}
 
+/*---------------------setBig---------------------*/
+.setBig{width:384px;height:454px;position: absolute;left:500px;top:0;border:1px solid #333;overflow: hidden;}
+.setBig img{position: absolute;left:0;top:0;}
 /*---------------------pro-tips---------------------*/
 .pro-tips{float: left;overflow: hidden;width:390px;}
 .pro-tips h3{line-height: 24px;font-weight: bold;color:#000;font-size: 16px;}
