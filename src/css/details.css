@@ -11,7 +11,7 @@
 .proList img{width:50px;height:60px;}
 
 /*---------------------pro-pic---------------------*/
-.pro-pic{width:384px;height:454px;overflow: hidden;float: left;position: relative;}
+.pro-pic{width:384px;height:454px;float: left;position: relative;}
 .pro-pic img{width:384px;height:454px;left:0;top:0;position:absolute;z-index:0;}
 .pro-pic .fangda{width:192px;height:227px;display:none;background:rgba(214,214,214,0.8);position: absolute;z-index:6;}
 

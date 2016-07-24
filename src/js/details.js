@@ -2,6 +2,7 @@ $(function(){
 	//详情页放大镜
 	var $proList = $(".proList").find('li');
 	var $proPic = $('.pro-pic').find('img');
+	var $pro = $('.pro-pic');
 	var $setBig = $('.setBig');
 	var $bigTu = $('.setBig').find("img");
 	//小图片跟商品的联系
@@ -17,10 +18,10 @@ $(function(){
 		});
 	});
 	//放大镜
-	$proPic.on("mouseenter",function(e){
+	$pro.on("mouseover",function(e){
 			$(".fangda").show();
 			$setBig.show();
-			$proPic.on('mousemove',function(e){
+			$pro.on('mousemove',function(e){
 				//e.offsetX
 				var offX = ($(".fangda").outerWidth())/2;
 				var offY = ($(".fangda").outerHeight())/2;
@@ -32,11 +33,28 @@ $(function(){
 				var fdX = $(this).offset().left;
 				var fdY = $(this).offset().top;
 
+
 				var Xbianju = e.pageX - fdX-offX;
 				var Ybianju = e.pageY - fdY-offY;
+
+				var rightX = fdX+fdleft-offX;
+				var bomY = fdY+fdTop-offY;
+
 				if(Xbianju<0){
 					Xbianju = 0;
-				}		
+				};
+				if(Ybianju<0){
+					Ybianju = 0;
+				};
+
+				console.log(e.pageX)
+				if(e.pageX>rightX){
+					Xbianju = fdleft-offX*2;
+				};
+
+				if(e.pageY>bomY){
+					Ybianju = fdTop-offY*2;
+				};				
 				
 				$(".fangda").css({
 					left : Xbianju,
@@ -63,7 +81,7 @@ $(function(){
 				//if()
 				return false;
 			});			
-		}).on('mouseleave',function(){
+		}).on('mouseout',function(){
 			$(".fangda").hide();
 			$setBig.hide();
 		});	
@@ -113,7 +131,11 @@ $(function(){
 			gouWu.hide();
 		}
 	});
-
+//回顶部
+	var $ding = $("#dingBu");
+	$ding.on("click",function(){
+		$(window).scrollTop(0);
+	});
 });
 //尺码事件	
 $(function(){

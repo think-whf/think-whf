@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/login_register.css"/>
 	<script src="../assets/jquery-1.12.0.js"></script>
 	<script src="../js/common.js"></script>
-	<script src="../js/login.js"></script>
+	<script src="../js/register.js"></script>
 </head>
 <body>
 <!--*********************公共头部***************************
@@ -65,27 +65,30 @@
 </div>
 <!--*********************login**************************-->
 <div class="log">
-	<div class="logBg">
-		<img src="../img/login/login_bg.png" alt=""/>
+	<div class="register">
+		<img src="../img/login/register_bg.png" alt=""/>
 		<form class="login">
 			<p class="email">
 				<label for="logTxt">手机/邮箱 : </label>
-				<input type="text" id="logTxt"/>
+				<input type="text" id="logTxt" placeholder="手机注册更享好礼" />
 			</p>
 			<p class="psw">
 				<label for="logBtn">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码 : </label>
 				<input type="password" id="logBtn"/>
 			</p>
+			<p class="psw">
+				<label for="logBtn">确认&nbsp;密码 : </label>
+				<input type="password" id="logBtn"/>
+			</p>
 			<p class="ziDong">
-				<input type="checkbox" checked=checked value="下次自动登录"/>
-				下次自动登录
-				<a href="#">忘了密码？</a>
+				<input type="checkbox" checked=checked value="订阅美西时尚资讯"/>
+				订阅美西时尚资讯
 			</p>
 			<p>
 				<button class="loginBtn">登录</button>
 			</p>
 			<p class="zhuCe">
-				<a href="register.html">立即注册</a>
+				已注册？<a href="login.html">登录</a>
 			</p>
 		</form>
 	</div>
