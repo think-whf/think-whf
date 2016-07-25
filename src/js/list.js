@@ -20,7 +20,12 @@ $(function(){
 	$.each($xuan,function(idx,item){
 		$(item).on("click",function(){
 			var $content = $(this).next();
-			$content.show();
+			$content.toggle();
 		});
 	});
+	var $gender = $('.gender');
+	var $color = $('.color');
+	$gender.off("click");
+	$color.off("click");
+
 });
