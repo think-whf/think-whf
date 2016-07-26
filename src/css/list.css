@@ -43,8 +43,8 @@
 .path p{float: right;width:154px;text-align: right;}
 
 /*-----------------------meixi-----------*/
-.meiXi{width: 100%;padding: 15px 230px;border-bottom:1px solid #333;overflow: hidden;position: absolute;background: #fff;z-index: 25;}
-.meiXi .meiXi-logo{float: left;overflow:hidden;height:36px;margin-right:10px;}
+.meiXi{width: 100%;padding: 15px 0px;border-bottom:1px solid #333;overflow: hidden;position: absolute;background: #fff;z-index: 25;}
+.meiXi .meiXi-logo{float: left;margin-left:15%;overflow:hidden;height:36px;margin-right:10px;}
 .meiXi .meiXi-logo a{display: block;height:36px;width:279px;background:url("img/logo.gif") no-repeat; }
 .meiXi .sou{float:left;width: 590px;height:36px;margin:0 36px;border: 1px solid #8e0c3a;}
 

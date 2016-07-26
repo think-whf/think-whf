@@ -12,7 +12,7 @@
 .commodity{width:168px;overflow:hidden;float:left;padding: 0 12px;padding-bottom:24px;margin-bottom:5px;}
 .commodity dd{margin:2px;text-align: center;}
 .dity-brand a{height:18px;line-height: 18px;}
-.thing{width:960px;position: absolute;overflow: hidden;left:0;top:0;}
+.thing{width:960px;position: absolute;overflow: hidden;}
 
 .corLeft,.corRight{display: block;width: 17px;height:26px;position: absolute;top:110px;}
 .corLeft{background:url("img/pic_arrow_l.png") no-repeat;}
