@@ -29,7 +29,7 @@ $(function(){
 
 	var index = 0;
 	var speed = 960;
-	timer = setInterval(init,1000);
+	timer = setInterval(init,2000);
 	init();
 
 	function init(){
@@ -85,3 +85,80 @@ $(function(){
 
 
 //---------------------------sold-code-------
+
+$(function(){
+	var soldL = $('.soldL');
+	var soldR = $('.soldR');
+	var code = $('.sold-code');
+	var coList = code.children("li");
+	var soldL = $(".soldL");
+	var soldR = $(".soldR");
+
+	var speed = 192;
+	var codeTime
+
+	codeInit();
+	codeShow();
+
+	 codeTime = setInterval(codeShow,2000);
+
+	
+//重置样式
+	function codeInit(){
+		for(var i=0;i<coList.length;i++){
+			$(coList.eq(i)).css("left",i*speed);
+		}
+	};
+//两秒改变li的left的值，大于0重置
+	function codeShow(){
+		$.each(coList,function(idx,item){
+			var checked = parseInt($(item).css("left"));
+			$(item).stop().animate({left:checked-speed},function(){
+				if(parseInt($(this).css("left"))<0){
+					$(this).css("left",960);
+				}
+			});										
+		});
+	};
+
+	code.hover(function(){
+		clearInterval(codeTime);
+	},function(){
+		codeTime = setInterval(codeShow,4000);
+	});
+
+
+	soldL.hover(function(){
+		clearInterval(codeTime);
+	},function(){
+		codeTime = setInterval(codeShow,4000);
+	});
+
+	soldR.hover(function(){
+		clearInterval(codeTime);
+	},function(){
+		codeTime = setInterval(codeShow,4000);
+	});
+
+	soldL.on("click",function(){
+		$.each(coList,function(idx,item){
+			var checked = parseInt($(item).css("left"));
+			$(item).stop().animate({left:checked-speed},function(){
+				if(parseInt($(this).css("left"))<0){
+					$(this).css("left",960);
+				}
+			});										
+		});
+	});
+
+	soldR.on("click",function(){
+		$.each(coList,function(idx,item){
+			var checked = parseInt($(item).css("left"));
+			$(item).stop().animate({left:checked+speed},function(){
+				if(parseInt($(this).css("left"))>960){
+					$(this).css("left",0);
+				}
+			});										
+		});
+	});
+});
