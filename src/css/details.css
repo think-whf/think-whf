@@ -90,8 +90,8 @@
 
 
 .pro_size{float: right;overflow: hidden;width:620px;height:224px;}
-.chiCun tr{margin-top:5px;background:#eabebe;}
-.chiCun tr td{text-align: center;padding-top:5px;padding-bottom:5px;border:none;border-spacing: 0;}
+.chiCun tr{margin-top:5px;background:#eabebe;width: 928px;}
+.chiCun tr td,.chiCun tr th{text-align: center;padding-top:5px;padding-bottom:5px;border:none;border-spacing: 0;border-collapse:collapse;}
 .pro_size p{text-align: right;margin-top:5px;}
 
 /*---------------------shipping---------------------*/

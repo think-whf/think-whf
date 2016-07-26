@@ -29,7 +29,8 @@
 	
 				var index = 0;
 				var speed = 960;
-				timer = setInterval(init,2000);
+				timer = setInterval(init,1000);
+				init();
 	
 				function init(){
 					index++;
