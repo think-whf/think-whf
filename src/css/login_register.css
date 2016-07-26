@@ -1,9 +1,10 @@
 /*-----------log----------------------*/
 .log{width:960px;height:517px;background:url("img/bg_main.jpg") no-repeat;margin:0 auto;margin-bottom:20px;}
-.logBg,.register{margin-left:50px;padding-top:28px;margin-bottom: 16px;width: 352px;}
-.login{width:280px;overflow: hidden;float: right;}
-.login p{padding: 8px 0;overflow: hidden;}
-#logTxt,#logBtn{width:204px;height:20px;line-height: 20px;float: right;margin-left:10px;}
+.logBg,.register{margin-left:50px;padding-top:28px;width: 352px;}
+.login{width:280px;float: right;position: relative;}
+.login p{padding: 10px 0;overflow: hidden;}
+#logTxt,#logpsw,#nextpsw{width:204px;height:20px;line-height: 20px;float: right;margin-left:10px;}
+.yzTxt,.yzPsw,.nextpsw{display: inline-block;float: left;height:16px;line-height: 16px;color:red;position: absolute;left:70px;background: #fff;}
 .psw label,.email label{float: left;height:20px;line-height: 20px;text-align: center;}
 .login .ziDong{padding-left:70px; }
 .ziDong input{float: left;margin-top:2px;}
