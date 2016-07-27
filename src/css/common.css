@@ -9,6 +9,7 @@
 .headLeft a:hover{color:#8e0c3a;}
 .headLeft .head_enroll{padding-right:16px;border-right:1px solid #ccc; }
 .headLeft .head_enter{padding: 0 14px;}
+#userSpan{color:red;display: inline-block;height:12px;cursor: pointer; line-height: 12px;border-bottom:1px solid red; }
 
 /*--------------headRight-------------------*/
 .headRight{float: right;margin-left:430px;}
@@ -31,6 +32,14 @@
 .shopping:hover{background:#fff;border:1px solid #ccc;border-bottom-color: #fff;}
 .cartList{width:316px;height:72px;line-height:72px;text-align:center;position: absolute;right:0;top:35px;border:1px solid #ccc;z-index: 6;background: #fff;display: none;}
 
+
+/*--------------shoppingPic-------------------*/
+.shopPic{float: left;height: 50px;width: 50px;margin:3px;margin-top:7px;}
+.picBox{width: 100%;height: 60px;overflow: hidden;position: relative;}
+.shopGoods{float: left;margin:15px;line-height: 18px;width: 150px; }
+.shopMone{float: :left;color:red;margin:15px;border-bottom: 1px solid #ccc;border-left: 1px solid #ccc;}
+
+.shopClose{position: absolute;width: 20px;height:20px;line-height: 20px;font-size:20px;border: 1px solid #ccc;right:0;top:0;cursor: pointer;}
 /*-------------------------headerList-------------------*/
 .headList{width:960px;margin:0 auto;padding-top:14px;height:120px; }
 .headList div{float:left;}
@@ -42,6 +51,7 @@
 #searchTxt,#searchBtn{float: left;border:none;}
 #searchTxt{width:132px;line-height: 24px;height:24px;}
 #searchBtn{width:24px;height:24px;background: url("img/search.jpg") no-repeat; }
+
 
 /*-----------------nav-------------------*/
 .headNav{float: left;border-bottom:1px solid #333;position: relative;}

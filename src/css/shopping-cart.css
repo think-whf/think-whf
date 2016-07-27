@@ -3,12 +3,24 @@
 
 .choose{width:960px;overflow: hidden;margin: 0 auto;padding:10px 0;}
 
-.cart{width:958px;min-height: 298px;border: 1px solid #ccc;margin:10px 0;}
+.cart{width:958px;min-height: 298px;border: 1px solid #ccc;margin:10px 0;position: relative;}
+.cartP{margin-top: 150px;width: 100%;text-align: center;color:#333;line-height: 16px;font-size: 16px;}
 .line-bt{text-align: center;line-height: 22px;width:960px;font-size:16px;color:#333;position:relative;}
 .line_Lbt,.line_Rbt{position: absolute;width:347px;border-bottom: 1px solid #ccc;top:22px;left:0;}
 .line_Rbt{left:auto;right:0;}
 
 .pic{width:960px;min-height:280px;overflow: hidden;position: relative;}
+/*--------------shoppingpic-------------------*/
+.cartPic{float: left;height: 58px;width: 58px;margin:1px;position:absolute;top:0;}
+.cartBox{float:left;width: 100%;height: 60px;overflow: hidden;position: relative;border-bottom:1px solid #ccc; }
+.cartSp{float: left;height:60px;margin-left:20%;line-height: 60px;width: 300px; }
+.cartMoney{float:right;color:red;height:60px;line-height:60px;margin-right:50px;}
+
+.cartClose{position: absolute;width: 40px;height:60px;line-height: 60px;font-size:24px;right:0;top:0;cursor: pointer;text-align: center;}
+
+.cartTotal{position: absolute;bottom: 0;width: 958px;height:40px;text-align: right;color:red;font-size: 24px;}
+
+/*--------------commodity-------------------*/
 .commodity{width:168px;overflow:hidden;float:left;padding: 0 12px;padding-bottom:24px;margin-bottom:5px;}
 .commodity dd{margin:2px;text-align: center;}
 .dity-brand a{height:18px;line-height: 18px;}

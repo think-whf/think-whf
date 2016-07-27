@@ -35,15 +35,25 @@ $(function(){
 		}
 		else{
 			$.ajax({
-					url:'http://localhost:3000/ajax/whf?type=check',
-					dataType:"json",
-					success:function(res){
-						console.log(res);
+				url:'http://10.16.155.27:3000/ajax/whf?type=check',
+				dataType:"json",
+				success:function(res){
+					var isOk = true;
+					$.each(res,function(idx,item){
+						console.log(item);
+						if(txtval == item.name){
+							$(".yzTxt").html("用户已被注册");
+							txtTrue = false;
+							isOk = false;
+						}
+					});
+					if(isOk){
 						$(".yzTxt").html("");
 						txtTrue = true;
 						$(".yzTxt").css("zIndex",0);
-					}
-			})
+					}					
+				}
+			});
 		}
 	});
 	//密码验证
@@ -92,7 +102,7 @@ $(function(){
 		console.log(txtTrue,pswTrue,nextpsw,txtval,pswval);
 		if(txtTrue==true && pswTrue==true && nextpsw==true){
 			$.ajax({
-					url:'http://localhost:3000/ajax/whf?type=reg',
+					url:'http://10.16.155.27:3000/ajax/whf?type=reg',
 					data:{sender:txtval,password:pswval},
 					success:function(res){
 					}

@@ -35,8 +35,8 @@
 
 .pro-tips .pro-Buy{overflow:hidden;height:32px;margin:28px 0;}
 .pro-Buy button{float: left;border:none;height:32px;}
-.goumai{width:120px;background:url("img/mai.gif") no-repeat;margin-right:8px;}
-.gouwudai{width:138px;background:url("img/gouwudai.gif") no-repeat;}
+.goumai{width:120px;background:url("img/mai.gif") no-repeat;margin-right:8px;cursor: pointer;}
+.gouwudai{width:138px;background:url("img/gouwudai.gif") no-repeat;cursor: pointer;}
 /*---------------------share---------------------*/
 .share{width:388px;height:40px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;line-height: 40px;position: relative;}
 .share b{float: left;font-weight: 200;}
