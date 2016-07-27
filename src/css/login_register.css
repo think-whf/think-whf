@@ -11,6 +11,6 @@
 .ziDong a{float: right;}
 
 
-.loginBtn{float: right;border:none;width:210px;height:28px;text-align: center;background:#8e0c3a;line-height: 28px;color: #fff;}
+.loginBtn,.regBtn{float: right;border:none;width:210px;height:28px;text-align: center;background:#8e0c3a;line-height: 28px;color: #fff;}
 .zhuCe{text-align: right;}
 .zhuCe a{float: right;color:#8e0c3a;}
