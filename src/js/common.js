@@ -39,16 +39,23 @@ $(function(){
 		var newArr = arr.toString().split(";");
 
 		var userInfo;
-		console.log(newArr);
+		
 		//用户名cokkie验证
 		for(var i=0;i<arr.length;i++){
 
 			for(var n=0;n<newArr.length;n++){
 				if(newArr[n].indexOf("userinfo=")!=-1){
+
 					var userArr;
+					if(n==0){
+						userArr = newArr[n].substring("userinfo=".length);
+					}else{
+						userArr = newArr[n].substring("userinfo=".length+1);
+					}
 					
-					userArr = newArr[n].substring("userinfo=".length+1);
+					console.log(userArr);
 					userInfo = JSON.parse(userArr.toString());
+
 					userInit();
 				};
 			}
@@ -114,10 +121,10 @@ $(function(){
 	
 });
 
-$(function(){
+/*$(function(){
 	var $cartList = $('.cartList');
 	$cartList.on("click",function(){
 		window.location.href="/html/shopping-cart.html"; 
 	});
-});
+});*/
 
