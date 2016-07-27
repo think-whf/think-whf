@@ -33,34 +33,57 @@ $(function(){
 
 /*----------denglu-----------*/
 $(function(){
-	var cookie = document.cookie;
-	if(cookie){
-		var arr = cookie.split("&");
-		var newArr = arr.toString().split(";");
+	git();
+	function git(){
+		var cookie = document.cookie;
+		if(cookie){
+			var arr = cookie.split("&");
+			var newArr = arr.toString().split(";");
 
-		var userInfo;
-		
-		//用户名cokkie验证
-		for(var i=0;i<arr.length;i++){
+			var userInfo;
+			
+			//用户名cokkie验证
+			for(var i=0;i<arr.length;i++){
 
-			for(var n=0;n<newArr.length;n++){
-				if(newArr[n].indexOf("userinfo=")!=-1){
+				for(var n=0;n<newArr.length;n++){
+					if(newArr[n].indexOf("userinfo=")!=-1){
 
-					var userArr;
-					if(n==0){
-						userArr = newArr[n].substring("userinfo=".length);
-					}else{
-						userArr = newArr[n].substring("userinfo=".length+1);
-					}
-					
-					console.log(userArr);
-					userInfo = JSON.parse(userArr.toString());
+						var newArr;
+						if(n==0){
+							userArr = newArr[n].substring("userinfo=".length);
+						}else{
+							userArr = newArr[n].substring("userinfo=".length+1);
+						}
+						
+						console.log(userArr);
+						userInfo = JSON.parse(userArr.toString());
 
-					userInit();
-				};
-			}
-					
+						userInit();
+					};
+				}
+						
+			};
+			for(var j=0;j<arr.length;j++){
+				for(var k=0;k<newArr.length;k++){
+					if(newArr[j].indexOf("shopping=")!=-1){
+						var shopArr;
+						var shop;
+						var shopping;
+
+						if(j==0){
+							shopArr = newArr[j].substring("shopping=".length);
+						}
+						else{
+							shopArr = newArr[j].substring("shopping=".length+1);
+						}
+						console.log(shopArr);					
+						var userInfo = JSON.parse(shopArr.toString());
+						shopping();
+					};
+				}	
+			};
 		};
+	
 			
 
 
@@ -72,34 +95,16 @@ $(function(){
 				$hede.html(username+" 欢迎您 "+"<span id='userSpan'>退出</span>");
 			}
 			$("#userSpan").on("click",function(){
-				console.log("11");
 				var now = new Date();
 				now.setDate(now.getDate()-1);
-				document.cookie = 'userinfo=null;expires=' + now;
+				document.cookie = 'userinfo=null;expires=' + now+";path=/";
 
 				location.reload();
+
 			});
 		}
 		//购物车cokkie
 		
-		for(var j=0;j<arr.length;j++){
-			for(var k=0;k<newArr.length;k++){
-				if(newArr[j].indexOf("shopping=")!=-1){
-					var shopArr;
-					var shop;
-					var shopping;
-
-					if(j==0){
-						shopArr = newArr[j].substring("shopping=".length);
-					}
-					else{
-						shopArr = newArr[j].substring("shopping=".length+1);
-					}					
-					var userInfo = JSON.parse(shopArr.toString());
-					shopping();
-				};
-			}	
-		};
 		function shopping(){
 				var $cartList = $(".cartList");
 				var img = $("<img/>").attr("src",userInfo.src).addClass("shopPic");
@@ -114,17 +119,17 @@ $(function(){
 		$(".shopClose").on("click",function(){
 			var now = new Date();
 				now.setDate(now.getDate()-1);
-				document.cookie = 'shopping=null;expires=' + now;
+				document.cookie = 'shopping=null;expires=' + now+";path=/";
 				location.reload();
 		});			
 	};
 	
 });
 
-/*$(function(){
+$(function(){
 	var $cartList = $('.cartList');
 	$cartList.on("click",function(){
 		window.location.href="/html/shopping-cart.html"; 
 	});
-});*/
+});
 

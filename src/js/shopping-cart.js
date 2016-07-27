@@ -83,7 +83,7 @@ $(function(){
 		$(".cartClose").on("click",function(){
 			var now = new Date();
 				now.setDate(now.getDate()-1);
-				document.cookie = 'shopping=null;expires=' + now;
+				document.cookie = 'shopping=null;expires=' +now+";path=/";
 				location.reload();
 		});
 	};

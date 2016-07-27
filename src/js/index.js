@@ -1,4 +1,5 @@
 	$(function(){
+		console.log(document.cookie);
 		//fous
 		var $fousUs = $('.fousUs');
 		var $link = $('.fousUs_link');

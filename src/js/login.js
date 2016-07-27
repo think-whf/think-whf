@@ -57,7 +57,7 @@ $(function(){
 	});
 	$login.on("click",function(){
 		$.ajax({
-			url:'http://10.16.155.27:3000/ajax/whf?type=check',
+			url:'http://localhost:3000/ajax/whf?type=check',
 				dataType:"json",
 				success:function(res){
 					var checkTrue = false;
@@ -65,7 +65,6 @@ $(function(){
 						console.log(txtval,pswval,$(item));
 						if(txtval==item.name && pswval==item.password){
 							checkTrue = true;
-							alert("登录成功");
 						}
 					})
 					if(checkTrue==false){
@@ -73,8 +72,10 @@ $(function(){
 					}
 					else{
 						var userinfo = {user:txtval,password:pswval};
-						document.cookie = 'userinfo=' + JSON.stringify(userinfo);
-						 window.location.href="/index.html"; 
+						document.cookie = 'userinfo=' + JSON.stringify(userinfo)+";path=/";
+						alert("登录成功");
+						window.location.href="/index.html";
+						return false; 
 					}
 			}
 		});

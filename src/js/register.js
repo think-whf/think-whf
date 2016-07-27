@@ -35,7 +35,7 @@ $(function(){
 		}
 		else{
 			$.ajax({
-				url:'http://10.16.155.27:3000/ajax/whf?type=check',
+				url:'http://localhost:3000/ajax/whf?type=check',
 				dataType:"json",
 				success:function(res){
 					var isOk = true;
@@ -102,13 +102,15 @@ $(function(){
 		console.log(txtTrue,pswTrue,nextpsw,txtval,pswval);
 		if(txtTrue==true && pswTrue==true && nextpsw==true){
 			$.ajax({
-					url:'http://10.16.155.27:3000/ajax/whf?type=reg',
+					url:'http://localhost:3000/ajax/whf?type=reg',
 					data:{sender:txtval,password:pswval},
 					success:function(res){
 					}
 				});
-
 				alert("注册成功");
+				window.location.href="/html/login.html";
+				return false;
+
 		}else{
 			alert("亲，信息没填好哦");
 		}

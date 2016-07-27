@@ -154,7 +154,7 @@ $(function(){
 	$shopping.on("click",function(){
 		console.log($img.substring(3));
 		var shopping = {goods:$deta,src:$img,money:money};
-		document.cookie = 'shopping=' + JSON.stringify(shopping);
-		console.log(document.cookie);
+		document.cookie = 'shopping=' + JSON.stringify(shopping)+";path=/";
+		location.reload();
 	});
 });
